@@ -1,26 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Pacifico&display=swap");
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/effect-fade";
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8effa;
+  --foreground: #70167e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: "Baloo 2", sans-serif;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Baloo 2", sans-serif;
+}
+
+.cta-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #d18109;
+  transition: transform 0.25s ease;
+}
+
+.cta-button__fill {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: #b86f07;
+  opacity: 0;
+  clip-path: polygon(
+    49.7% 48.8%,
+    50.3% 48.8%,
+    50.3% 49.7%,
+    51.2% 49.7%,
+    51.2% 50.3%,
+    50.3% 50.3%,
+    50.3% 51.2%,
+    49.7% 51.2%,
+    49.7% 50.3%,
+    48.8% 50.3%,
+    48.8% 49.7%,
+    49.7% 49.7%
+  );
+  transition:
+    clip-path 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.2s ease;
+}
+
+.cta-button:hover .cta-button__fill {
+  opacity: 1;
+  clip-path: inset(0 round 999px);
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+}
+
+.cta-button__inner-border {
+  position: absolute;
+  inset: 6px;
+  z-index: 1;
+  border: 1.5px dashed #f6d39f;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.cta-button__label {
+  position: relative;
+  z-index: 2;
 }
