@@ -9,7 +9,7 @@ import {
 
 const sections = [
   {
-    title: "Market & Demand",
+    title: "Market and Demand",
     icon: FaChartLine,
     accent: "text-[#cf8605]",
     bg: "bg-[#fbf2e6]",
@@ -22,7 +22,7 @@ const sections = [
     ],
   },
   {
-    title: "Social & Demographic Factors",
+    title: "Social and Demographic Factors",
     icon: FaUsers,
     accent: "text-[#7b2aa1]",
     bg: "bg-[#f6effb]",
@@ -42,13 +42,13 @@ const sections = [
     checks: "text-[#5b248f]",
     items: [
       "Early years are crucial for brain development",
-      "Preschool improves social, emotional, and thinking skills",
+      "Preschool improves social, emotional and thinking skills",
       "Helps in better school readiness and confidence",
       "Builds strong foundation for lifelong learning",
     ],
   },
   {
-    title: "Business & Entrepreneurship",
+    title: "Business and Entrepreneurship",
     icon: FaBriefcase,
     accent: "text-[#cf8605]",
     bg: "bg-[#fbf7e9]",
@@ -61,19 +61,19 @@ const sections = [
     ],
   },
   {
-    title: "Policy & Government Support",
+    title: "Policy and Government Support",
     icon: FaBalanceScale,
     accent: "text-[#5b248f]",
     bg: "bg-[#eef2ff]",
     checks: "text-[#5b248f]",
     items: [
-      "NEP 2020 promotes Early Childhood Care & Education (ECCE)",
+      "NEP 2020 promotes Early Childhood Care and Education (ECCE)",
       "Increasing focus on foundational learning",
       "More awareness and acceptance of preschool education",
     ],
   },
   {
-    title: "Quality Gap & Opportunity",
+    title: "Quality Gap and Opportunity",
     icon: FaBookOpen,
     accent: "text-[#3a7a4e]",
     bg: "bg-[#eefaf1]",
@@ -81,7 +81,7 @@ const sections = [
     items: [
       "Many areas lack good quality preschools",
       "Opportunity to offer better infrastructure and teaching methods",
-      "Parents seek safe, caring, and learning-focused schools",
+      "Parents seek safe, caring and learning-focused schools",
     ],
   },
 ];

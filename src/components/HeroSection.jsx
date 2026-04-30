@@ -8,7 +8,7 @@ export default function HeroSection() {
         <div className="flex w-full flex-col-reverse items-center justify-between gap-8 sm:gap-10 lg:flex-row lg:gap-12">
           <div className="relative z-10 w-full max-w-xl text-center lg:max-w-none lg:w-[55%] lg:text-left">
             <p className="mb-3 text-sm font-medium text-[#70167e]/80 sm:mb-4 sm:text-base md:text-lg">
-              Kindergarten &amp; Day Care ✨
+            Preschool &amp; Day Care ✨
             </p>
             <h1 className="text-2xl font-bold leading-tight text-black sm:text-3xl md:text-4xl md:leading-tight lg:text-5xl">
               Where Little Minds Begin <span className="text-[#70167e]">Extraordinary </span> Journeys.

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutSection() {
   const featureCards = [
     {
-      title: "Safe & Caring Space",
+      title: "Safe and Caring Space",
       description:
         "We create a safe and loving space for every child and parent.",
       bgColor: "bg-[#4f830e]",

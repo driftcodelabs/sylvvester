@@ -55,7 +55,7 @@ export default function FranchiseLegacySection() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-[#5e6074] md:text-lg">
             Choosing the right preschool franchise is not just an investment - it
-            is a statement of vision, values, and leadership.
+            is a statement of vision, values and leadership.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function FranchiseLegacySection() {
               "Our brand represents:",
               "• Trust. Prestige. Quality.",
               "• A refined learning environment",
-              "• High standards in safety, pedagogy, and care",
+              "• High standards in safety, pedagogy and care",
               "• A reputation that commands confidence and loyalty",
               "This ensures faster enrolments, stronger word-of-mouth and long-term brand value in your city.",
             ]}

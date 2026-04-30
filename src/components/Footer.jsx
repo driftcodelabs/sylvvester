@@ -34,20 +34,20 @@ export default function Footer() {
             <div className="mt-6 space-y-2 text-sm leading-relaxed text-white/85 md:text-base">
               <p>
                 <span className="font-semibold text-white">Phone:</span>{" "}
-                72101-01234
+                9799366138 and 6375975479
               </p>
               <p>
                 <span className="font-semibold text-white">Email:</span>{" "}
-                hello@sylvvesterworldschool.com
+                sylvvesterworldschool@gmail.com
               </p>
               <p className="pt-1">
                 <span className="font-semibold text-white">Address:</span>{" "}
-                123 Learning Lane, Education City — Your City, State 302001
+                A-89, Ganga Path, Vaishali Nagar, Jaipur - 302021 Rajasthan
               </p>
             </div>
             <div className="mt-6 flex items-center gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/sylvvesterworldschool"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-xl text-white transition hover:bg-[#d18109]"

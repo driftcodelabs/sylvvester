@@ -1,7 +1,7 @@
 const steps = [
   {
     number: "01",
-    title: "Market Analysis & Feasibility Study",
+    title: "Market Analysis and Feasibility Study",
     bullets: [
       "Evaluate local demand and demographics for early childhood education.",
       "Assess competition and identify your unique value proposition.",
@@ -11,7 +11,7 @@ const steps = [
   },
   {
     number: "02",
-    title: "Franchise Onboarding & Licensing Support",
+    title: "Franchise Onboarding and Licensing Support",
     bullets: [
       "Step-by-step guidance on registering the franchise under local legal requirements.",
       "Assistance with obtaining necessary permits, approvals and compliance with education regulations.",
@@ -20,7 +20,7 @@ const steps = [
   },
   {
     number: "03",
-    title: "Location Selection & Infrastructure Planning",
+    title: "Location Selection and Infrastructure Planning",
     bullets: [
       "Criteria for choosing a safe, accessible and child-friendly location.",
       "Recommended classroom layouts, furniture, learning zones and play areas.",
@@ -30,7 +30,7 @@ const steps = [
   },
   {
     number: "04",
-    title: "Curriculum & Pedagogical Framework",
+    title: "Curriculum and Pedagogical Framework",
     bullets: [
       "Access to a proven curriculum aligned with your educational philosophy.",
       "Guidelines for age-appropriate learning activities, teaching aids and digital resources.",
@@ -40,7 +40,7 @@ const steps = [
   },
   {
     number: "05",
-    title: "Staff Recruitment & Training",
+    title: "Staff Recruitment and Training",
     bullets: [
       "Hiring standards for teachers and support staff.",
       "Comprehensive onboarding and ongoing professional development programs.",
@@ -50,7 +50,7 @@ const steps = [
   },
   {
     number: "06",
-    title: "Operational Guidelines & Standard Processes",
+    title: "Operational Guidelines and Standard Processes",
     bullets: [
       "Standard operating procedures (SOPs) for daily classroom and administrative operations.",
       "Policies for student enrolment, fee collection, parent engagement and safety protocols.",
@@ -60,7 +60,7 @@ const steps = [
   },
   {
     number: "07",
-    title: "Marketing & Admissions Strategy",
+    title: "Marketing and Admissions Strategy",
     bullets: [
       "Branding support and promotional materials.",
       "Localized marketing strategies to attract and retain students.",
@@ -70,7 +70,7 @@ const steps = [
   },
   {
     number: "08",
-    title: "Launch Support & Continuous Guidance",
+    title: "Launch Support and Continuous Guidance",
     bullets: [
       "Assistance during soft launch and grand opening events.",
       "Access to ongoing operational support, curriculum updates and best practices.",
@@ -80,7 +80,7 @@ const steps = [
   },
   {
     number: "09",
-    title: "Financial Planning & ROI Guidance",
+    title: "Financial Planning and ROI Guidance",
     bullets: [
       "Estimated initial investment and operational costs.",
       "Revenue projection models and guidance for maximizing profitability.",

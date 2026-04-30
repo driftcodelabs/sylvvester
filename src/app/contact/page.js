@@ -6,7 +6,7 @@ import ContactMapSection from "@/components/ContactMapSection";
 export const metadata = {
   title: "Contact Us | Sylvvester World School",
   description:
-    "Get in touch with Sylvvester World School. Send a message, find contact details, and locate us on the map.",
+    "Get in touch with Sylvvester World School. Send a message, find contact details and locate us on the map.",
 };
 
 export default function ContactPage() {

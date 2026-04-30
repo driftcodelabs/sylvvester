@@ -79,7 +79,12 @@ export default function Header({ stripeColor = "#f8effa" }) {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-        
+          <CommonButton
+            label="Contact Us"
+            href="/contact"
+            className="hidden px-5 py-2.5 text-sm lg:inline-flex"
+          />
+
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[#70167e]/20 text-[#70167e] transition hover:bg-[#f8effa] lg:hidden"

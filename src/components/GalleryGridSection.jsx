@@ -30,7 +30,7 @@ const galleryItems = [
   },
   {
     id: 5,
-    title: "Music & Dance",
+    title: "Music and Dance",
     subtitle: "School",
     color: "bg-[#c88f5e]",
   },

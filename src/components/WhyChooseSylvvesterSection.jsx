@@ -12,7 +12,7 @@ const reasons = [
 
 export default function WhyChooseSylvvesterSection() {
   return (
-    <section className="bg-white py-18">
+    <section className="bg-[#f6f1e4] py-18">
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-6 md:px-10 lg:grid-cols-2">
         <div className="relative mx-auto h-[430px] w-full max-w-[460px] rounded-4xl bg-[#f4ecfa] p-4 shadow-lg">
           <div className="relative h-full w-full overflow-hidden rounded-3xl">
@@ -34,9 +34,7 @@ export default function WhyChooseSylvvesterSection() {
         </div>
 
         <article className="pt-8 lg:pt-0">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d18109]">
-            Welcome to
-          </p>
+      
           <h2 className="mt-3 text-4xl font-extrabold leading-tight text-[#22253a] md:text-5xl">
             Why Choose
             <span className="block text-[#5b248f]">Sylvvester World School</span>
@@ -60,9 +58,7 @@ export default function WhyChooseSylvvesterSection() {
             ))}
           </ul>
 
-          <div className="mt-8">
-            <CommonButton label="Read More" className="px-9 py-3" />
-          </div>
+          
         </article>
       </div>
     </section>

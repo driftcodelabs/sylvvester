@@ -25,7 +25,7 @@ export default function AdmissionWhatWeOfferSection() {
                 </h3>
               </div>
               <p className="mt-2 text-base leading-relaxed text-[#5e6074]">
-                Pre-school has open door & also offer free trial sessions.
+                Pre-school has open door and also offer free trial sessions.
               </p>
             </div>
             <div>

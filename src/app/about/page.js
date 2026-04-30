@@ -13,7 +13,7 @@ import AdmissionCtaSection from "@/components/AdmissionCtaSection";
 export const metadata = {
   title: "About Us | Sylvvester World School",
   description:
-    "Learn about Sylvvester World School, our vision, mission, and child-first learning approach.",
+    "Learn about Sylvvester World School, our vision, mission and child-first learning approach.",
 };
 
 export default function AboutPage() {
@@ -24,8 +24,9 @@ export default function AboutPage() {
       <AboutUsSection />
       <AboutOverviewSection />
       <WhyChooseSylvvesterSection />
+      <AmenitiesSection />
       <WhyChooseUsSection />
-      <AdmissionCtaSection />
+      {/* <AdmissionCtaSection /> */}
       {/* <ProgramsSection />
       <AmenitiesSection /> */}
       {/* <TestimonialSection /> */}

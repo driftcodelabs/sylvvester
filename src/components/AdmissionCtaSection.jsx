@@ -26,7 +26,7 @@ export default function AdmissionCtaSection() {
           comfortable admission experience.
         </p>
         <div className="mt-10 flex justify-center">
-          <CommonButton label="Take Admission" className="px-10 py-4" />
+          <CommonButton label="Take Admission" href="/admission" className="px-10 py-4" />
         </div>
       </div>
     </section>

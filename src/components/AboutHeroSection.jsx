@@ -12,16 +12,14 @@ export default function AboutHeroSection() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-center flex-col gap-8 px-6 pb-28 pt-18 text-center md:px-10  lg:text-left">
           <div className="text-white">
-            <p className="text-base font-bold uppercase tracking-[0.16em] text-[#ffd67d] md:text-lg">
-              Kid&apos;s Playground
+            <p className="text-base text-center font-bold uppercase tracking-[0.16em] text-[#ffd67d] md:text-lg">
+              Preschool
             </p>
-            <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-6xl">
-              Welcome To Kid&apos;s
-              <span className="block">Indoor Playground</span>
+            <h1 className="mt-4 text-4xl text-center font-extrabold leading-tight md:text-6xl">
+
+              World class
+              <span className="block">early childhood<span className="block"> education.</span></span>
             </h1>
-            <p className="mt-4 text-lg font-medium text-white/90">
-              Our passion is childhood, and we are in kindergarten.
-            </p>
 
           </div>
 

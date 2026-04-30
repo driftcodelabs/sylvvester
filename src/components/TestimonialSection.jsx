@@ -17,7 +17,7 @@ const testimonials = [
     name: "Mia Anderson",
     role: "Product Designer",
     quote:
-      "The staff creates a warm and inspiring environment where children build confidence, creativity, and social skills every single day.",
+      "The staff creates a warm and inspiring environment where children build confidence, creativity and social skills every single day.",
     imageColor: "bg-[#87b2c9]",
     avatarColor: "bg-[#d7ebf7]",
   },

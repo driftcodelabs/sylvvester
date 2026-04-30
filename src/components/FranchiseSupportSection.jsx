@@ -16,49 +16,49 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const supportItems = [
   {
-    title: "End-to-End Infrastructure & Setup Assistance:",
+    title: "End-to-End Infrastructure and Setup Assistance:",
     description:
       "We provide comprehensive support for establishing your centre, including expert guidance on site selection, on- ground location evaluation and detailed space planning through professional architectural layouts with advanced 2D and 3D design concepts.",
     Icon: FaDraftingCompass,
     accent: "bg-[#f8effa] text-[#5b248f]",
   },
   {
-    title: "Procurement & Vendor Enablement:",
+    title: "Procurement and Vendor Enablement:",
     description:
-      "We facilitate seamless sourcing of furniture, equipment, and learning resources by sharing a curated vendor ecosystem and procurement guidelines to ensure quality, consistency and cost efficiency.",
+      "We facilitate seamless sourcing of furniture, equipment and learning resources by sharing a curated vendor ecosystem and procurement guidelines to ensure quality, consistency and cost efficiency.",
     Icon: FaShoppingCart,
     accent: "bg-[#fff4e2] text-[#d18109]",
   },
   {
-    title: "Brand Development & Market Positioning:",
+    title: "Brand Development and Market Positioning:",
     description:
       "Our team extends strategic support in building a strong local brand presence through structured marketing initiatives, brand assets and promotional planning to ensure rapid visibility and credibility in your market.",
     Icon: FaBullhorn,
     accent: "bg-[#f8effa] text-[#5b248f]",
   },
   {
-    title: "Academic Framework & Curriculum Execution:",
+    title: "Academic Framework and Curriculum Execution:",
     description:
       "You gain access to our well-researched curriculum, enriched content libraries, structured activity frameworks and assessment methodologies, along with implementation guidance to deliver consistent academic excellence.",
     Icon: FaBookOpen,
     accent: "bg-[#fff4e2] text-[#d18109]",
   },
   {
-    title: "Comprehensive Training & Capability Building:",
+    title: "Comprehensive Training and Capability Building:",
     description:
       "We conduct intensive and ongoing training programs for franchise owners, principals and teaching staffs, covering academics, business operations, ERP/software usage, transport coordination, admissions management and parent engagement.",
     Icon: FaChalkboardTeacher,
     accent: "bg-[#f8effa] text-[#5b248f]",
   },
   {
-    title: "Continuous Academic Research & Innovation:",
+    title: "Continuous Academic Research and Innovation:",
     description:
       "Our dedicated academic team consistently upgrades curriculum frameworks, teaching methodologies and learning outcomes to ensure your centre stays aligned with global best practices in early childhood education.",
     Icon: FaFlask,
     accent: "bg-[#fff4e2] text-[#d18109]",
   },
   {
-    title: "Local Marketing & PR Advisory:",
+    title: "Local Marketing and PR Advisory:",
     description:
       "We provide strategic direction and ready-to-use frameworks for executing local marketing campaigns, community outreach programs and public relations initiatives to drive sustained admissions growth.",
     Icon: FaHandshake,

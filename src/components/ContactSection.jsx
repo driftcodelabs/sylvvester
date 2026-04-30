@@ -127,7 +127,7 @@ export default function ContactSection() {
                     Mobile
                   </p>
                   <p className="mt-1 text-2xl font-extrabold text-[#344e67]">
-                    9799366138
+                    9799366138 / 6375975479
                   </p>
                 </div>
               </div>
@@ -141,17 +141,17 @@ export default function ContactSection() {
                 <div>
                   <p className="text-xl font-semibold text-[#344e67]">Email</p>
                   <p className="mt-1 text-xl font-extrabold text-[#344e67] break-all">
-                    hello@sylvvesterworldschool.com
+                    sylvvesterworldschool@gmail.com
                   </p>
                 </div>
               </div>
 
               <div className="rounded-3xl bg-white p-6 text-sm leading-relaxed text-[#5e6074]">
                 <p className="text-base font-extrabold text-[#232638]">
-                  Office Hours
+                  Address
                 </p>
                 <p className="mt-2">
-                  Monday to Saturday: 9:00 AM – 5:00 PM
+                  A-89, Ganga Path, Vaishali Nagar, Jaipur - 302021 Rajasthan
                 </p>
                
               </div>

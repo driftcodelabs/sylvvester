@@ -19,22 +19,22 @@ const programItems = [
   {
     title: "KG",
     description:
-      "As your child embarks on their learning adventure, our teachers turn every day into an exciting journey! Here in KG from weaving words into magical stories to discovering the wonders of numbers, and creating art that sparks imagination, learning is always hands-on and joyful. Our flexible learning spaces are designed to embrace every child’s uniqueness, keeping curiosity alive while fostering creativity, confidence, and connection.",
+      "As your child embarks on their learning adventure, our teachers turn every day into an exciting journey! Here in KG from weaving words into magical stories to discovering the wonders of numbers and creating art that sparks imagination, learning is always hands-on and joyful. Our flexible learning spaces are designed to embrace every child’s uniqueness, keeping curiosity alive while fostering creativity, confidence and connection.",
   },
   {
     title: "Prep",
     description:
-      "In Prep, learning comes alive! Our dedicated teachers create hands-on experiences that spark curiosity and creativity. Our Prep program cultivates a strong foundation for lifelong learning. Expert teachers guide children through interactive lessons that enhance literacy, numeracy and creative thinking. Hands-on projects, collaborative activities, and artistic expression encourage problem-solving, empathy, and confidence. This holistic approach ensures that every child develops academically, socially and emotionally, emerging as a well-prepared, enthusiastic learner ready for the next stage of education.",
+      "In Prep, learning comes alive! Our dedicated teachers create hands-on experiences that spark curiosity and creativity. Our Prep program cultivates a strong foundation for lifelong learning. Expert teachers guide children through interactive lessons that enhance literacy, numeracy and creative thinking. Hands-on projects, collaborative activities and artistic expression encourage problem-solving, empathy and confidence. This holistic approach ensures that every child develops academically, socially and emotionally, emerging as a well-prepared, enthusiastic learner ready for the next stage of education.",
   },
   {
     title: "Daycare",
     description:
-      "Our daycare is a home away from home. Here, children feel safe, cared for, and free to explore. Through creative play, stories, music, and hands-on activities, they develop social skills, independence, and confidence while having fun every day.",
+      "Our daycare is a home away from home. Here, children feel safe, cared for and free to explore. Through creative play, stories, music and hands-on activities, they develop social skills, independence and confidence while having fun every day.",
   },
   {
     title: "After School Activities",
     description:
-      "Our preschool offers a vibrant and enriching environment that extends beyond the regular school hours. Our after-school activities are designed to support academic growth, creativity, and physical development. Children can benefit from tuitions up to Grade 8, improving their understanding and confidence in core subjects. We also offer handwriting enhancement classes, dance lessons, and a variety of other fun, engaging activities that nurture creativity, coordination, and social skills. These programs ensure that every child has the opportunity to explore new interests, develop talents, and grow holistically in a safe and supportive setting.",
+      "Our preschool offers a vibrant and enriching environment that extends beyond the regular school hours. Our after-school activities are designed to support academic growth, creativity and physical development. Children can benefit from tuitions up to Grade 8, improving their understanding and confidence in core subjects. We also offer handwriting enhancement classes, dance lessons and a variety of other fun, engaging activities that nurture creativity, coordination and social skills. These programs ensure that every child has the opportunity to explore new interests, develop talents and grow holistically in a safe and supportive setting.",
   },
 ];
 

@@ -5,6 +5,7 @@ export default function CommonButton({
   className = "",
   type = "button",
   href,
+  onClick,
 }) {
   const baseClassName = `cta-button inline-flex items-center justify-center rounded-full px-8 py-3 text-lg font-semibold text-white shadow-md ${className}`;
   const content = (
@@ -24,7 +25,7 @@ export default function CommonButton({
   }
 
   return (
-    <button type={type} className={baseClassName}>
+    <button type={type} className={baseClassName} onClick={onClick}>
       {content}
     </button>
   );

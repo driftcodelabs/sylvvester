@@ -24,7 +24,7 @@ const reasons = [
     title: "Amenities",
     description:
       "Live CCTV surveillance, child-safe infrastructure and 100% female staff for complete care.",
-    tag: "Safe & Secure",
+    tag: "Safe and Secure",
   },
   {
     title: "Parent's Perspective",

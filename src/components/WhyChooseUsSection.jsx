@@ -11,8 +11,8 @@ const slides = [
     title: "Physical and Mental Well-being",
     subtitle: "Promoting healthy bodies and resilient minds",
     detailPoints: [
-      "Daily movement time through guided play, dance, and outdoor exploration",
-      "Healthy routines for handwashing, rest, hydration, and nutrition awareness",
+      "Daily movement time through guided play, dance and outdoor exploration",
+      "Healthy routines for handwashing, rest, hydration and nutrition awareness",
       "Mindful moments to help children identify emotions and feel calm and safe",
       "Warm teacher support that builds resilience and positive self-image",
     ],
@@ -21,9 +21,9 @@ const slides = [
   },
   {
     title: "Social and Emotional Growth",
-    subtitle: "Building empathy, teamwork, and self-confidence",
+    subtitle: "Building empathy, teamwork and self-confidence",
     detailPoints: [
-      "Circle-time activities that teach sharing, kindness, and active listening",
+      "Circle-time activities that teach sharing, kindness and active listening",
       "Role-play and storytelling to understand feelings and respect others",
       "Small-group projects that nurture teamwork and friendships",
       "Positive encouragement that helps every child feel valued and confident",
@@ -33,9 +33,9 @@ const slides = [
   },
   {
     title: "Inquiry-Based Learning",
-    subtitle: "Encouraging curiosity, questioning, and discovery",
+    subtitle: "Encouraging curiosity, questioning and discovery",
     detailPoints: [
-      "Hands-on learning corners for science, sensory play, and exploration",
+      "Hands-on learning corners for science, sensory play and exploration",
       "Question-led lessons where children ask 'why' and test simple ideas",
       "Nature walks and observation tasks to build curiosity about the world",
       "Teacher-guided discovery that turns everyday moments into learning",
@@ -45,11 +45,11 @@ const slides = [
   },
   {
     title: "Effective Communication",
-    subtitle: "Enhancing speaking, listening, and writing skills",
+    subtitle: "Enhancing speaking, listening and writing skills",
     detailPoints: [
-      "Storytelling, rhyme time, and show-and-tell to build expressive language",
+      "Storytelling, rhyme time and show-and-tell to build expressive language",
       "Guided conversations that develop listening and turn-taking skills",
-      "Pre-writing activities through tracing, drawing, and creative mark-making",
+      "Pre-writing activities through tracing, drawing and creative mark-making",
       "Language-rich classrooms that support vocabulary in meaningful contexts",
     ],
     icon: "🗣️",
@@ -61,19 +61,19 @@ const slides = [
     detailPoints: [
       "Open-ended art and construction tasks that inspire imagination",
       "Puzzles and classroom challenges that develop reasoning skills",
-      "Opportunities to plan, try, improve, and celebrate effort",
-      "Creative expression through music, movement, and dramatic play",
+      "Opportunities to plan, try, improve and celebrate effort",
+      "Creative expression through music, movement and dramatic play",
     ],
     icon: "💡",
     color: "bg-[#8a6de9]",
   },
   {
-    title: "Digital & Technology Awareness",
+    title: "Tech and Digital Awareness",
     subtitle: "Introducing age-appropriate tech skills",
     detailPoints: [
       "Safe and guided use of interactive tools for early learning",
       "Screen-time activities focused on creativity, not passive viewing",
-      "Introduction to simple digital habits like care, sharing, and responsibility",
+      "Introduction to simple digital habits like care, sharing and responsibility",
       "Balanced learning that blends technology with hands-on experiences",
     ],
     icon: "💻",
@@ -85,11 +85,44 @@ const slides = [
     detailPoints: [
       "Individual encouragement based on each child's unique pace and strengths",
       "Small milestones that build motivation and pride in progress",
-      "Growth-focused feedback that values effort, persistence, and improvement",
+      "Growth-focused feedback that values effort, persistence and improvement",
       "A joyful culture where every child is supported to shine",
     ],
     icon: "🌟",
     color: "bg-[#e07a5f]",
+  },
+];
+
+const programs = [
+  {
+    title: "Playgroup",
+    description:
+      "Our Playgroup program is designed for young children taking their first step into a structured learning environment. It introduces children to a safe, nurturing environment where learning happens through play.",
+  },
+  {
+    title: "Nursery",
+    description:
+      "Nursery marks the new beginning of your child's educational journey. At this age, children become more curious, independent and eager to explore. Our curriculum is designed to support their growing skills thereby laying a strong foundation for future schooling.",
+  },
+  {
+    title: "KG",
+    description:
+      "As your child embarks on their learning adventure, our teachers turn every day into an exciting journey! Here in KG from weaving words into magical stories to discovering the wonders of numbers, and creating art that sparks imagination, learning is always hands-on and joyful. Our flexible learning spaces are designed to embrace every child's uniqueness, keeping curiosity alive while fostering creativity, confidence, and connection.",
+  },
+  {
+    title: "Prep",
+    description:
+      "In Prep, learning comes alive! Our dedicated teachers create hands-on experiences that spark curiosity and creativity. Our Prep program cultivates a strong foundation for lifelong learning. Expert teachers guide children through interactive lessons that enhance literacy, numeracy and creative thinking. Hands-on projects, collaborative activities, and artistic expression encourage problem-solving, empathy, and confidence. This holistic approach ensures that every child develops academically, socially and emotionally, emerging as a well-prepared, enthusiastic learner ready for the next stage of education.",
+  },
+  {
+    title: "Daycare",
+    description:
+      "Our daycare is a home away from home. Here, children feel safe, cared for, and free to explore. Through creative play, stories, music, and hands-on activities, they develop social skills, independence, and confidence while having fun every day.",
+  },
+  {
+    title: "After School Activities",
+    description:
+      "Our preschool offers a vibrant and enriching environment that extends beyond the regular school hours. Our after-school activities are designed to support academic growth, creativity, and physical development. Children can benefit from tuitions up to Grade 8, improving their understanding and confidence in core subjects. We also offer handwriting enhancement classes, dance lessons, and a variety of other fun, engaging activities that nurture creativity, coordination, and social skills. These programs ensure that every child has the opportunity to explore new interests, develop talents, and grow holistically in a safe and supportive setting.",
   },
 ];
 
@@ -147,6 +180,7 @@ function ArrowIcon({ flipped = false }) {
 
 export default function WhyChooseUsSection() {
   const [activeSlide, setActiveSlide] = useState(null);
+  const [isProgramsModalOpen, setIsProgramsModalOpen] = useState(false);
   const swiperRef = useRef(null);
   const sectionRef = useRef(null);
   const [sectionInView, setSectionInView] = useState(false);
@@ -205,7 +239,7 @@ export default function WhyChooseUsSection() {
       <div className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 md:px-10 md:pb-0">
         <h2 className="mt-2 text-center text-2xl font-bold leading-tight text-[#232638] sm:text-3xl md:text-4xl lg:text-6xl">
           The Seven Key
-          <span className="block text-[#d18109]">Dimensions of Learning</span>
+          <span className="block text-[#d18109]">7 Dimensions of Learning</span>
         </h2>
 
         <div className="mt-8 flex min-w-0 flex-col gap-4 sm:mt-10 md:mt-12 md:flex-row md:items-center md:gap-5">
@@ -270,7 +304,11 @@ export default function WhyChooseUsSection() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <CommonButton label="Explore Our Programs" className="px-9 py-3" />
+          <CommonButton
+            label="Explore Our Programs"
+            className="px-9 py-3"
+            onClick={() => setIsProgramsModalOpen(true)}
+          />
         </div>
       </div>
 
@@ -329,6 +367,45 @@ export default function WhyChooseUsSection() {
                   <li key={point}>{point}</li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {isProgramsModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-[#111]/60 p-0 sm:items-center sm:p-4">
+          <div className="relative max-h-[95dvh] w-full max-w-4xl overflow-y-auto rounded-t-3xl border border-[#ece5d9] bg-[#fffaf1] shadow-2xl sm:max-h-[90dvh] sm:rounded-3xl">
+            <button
+              type="button"
+              className="sticky right-4 top-4 z-20 ml-auto mr-4 mt-4 flex rounded-full bg-[#2b305d] p-2 text-white transition hover:bg-[#d18109]"
+              onClick={() => setIsProgramsModalOpen(false)}
+              aria-label="Close programs modal"
+            >
+              <FaTimes />
+            </button>
+
+            <div className="px-5 pb-8 pt-2 text-[#232638] sm:px-8 sm:pb-10 md:px-10">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#9f2694] sm:text-base">
+                Programs Offered
+              </p>
+              <h3 className="mt-2 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
+                Explore Our Programs
+              </h3>
+              <div className="mt-6 space-y-5 sm:mt-8">
+                {programs.map((program) => (
+                  <article
+                    key={program.title}
+                    className="rounded-2xl border border-[#ece5d9] bg-white/90 px-4 py-4 shadow-sm sm:px-5 sm:py-5"
+                  >
+                    <h4 className="text-lg font-bold text-[#d18109] sm:text-xl">
+                      {program.title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-[#57596c] sm:text-base">
+                      {program.description}
+                    </p>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </div>
