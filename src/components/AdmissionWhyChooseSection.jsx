@@ -145,13 +145,7 @@ export default function AdmissionWhyChooseSection() {
                       {item.description}
                     </p>
 
-                    <button
-                      type="button"
-                      className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#232638] hover:text-[#d18109]"
-                    >
-                      Read More
-                      <FaArrowRight className="text-[11px]" />
-                    </button>
+                   
                   </article>
                 </SwiperSlide>
               );

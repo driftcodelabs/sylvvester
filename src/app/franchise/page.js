@@ -17,7 +17,7 @@ export const metadata = {
 export default function FranchisePage() {
   return (
     <>
-      <Header stripeColor="#5b1c93" />
+      <Header stripeColor="#ffffff" />
       <FranchiseHeroSection />
       <FranchiseWhyChooseSection />
       <FranchiseWhyStartPreschoolSection />

@@ -14,7 +14,7 @@ export default function ContactPage() {
     <>
       <Header stripeColor="#fff8ef" />
       <ContactSection />
-      <ContactMapSection />
+      {/* <ContactMapSection /> */}
       <Footer />
     </>
   );

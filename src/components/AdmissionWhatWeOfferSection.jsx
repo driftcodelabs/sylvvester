@@ -1,4 +1,26 @@
-import { FaChalkboardTeacher, FaLightbulb, FaPalette, FaShieldAlt } from "react-icons/fa";
+import {
+  FaFemale,
+  FaShieldAlt,
+  FaSchool,
+  FaUtensils,
+  FaUserTie,
+  FaVideo,
+} from "react-icons/fa";
+
+const leftPointers = [
+  { text: "Well Designed Safe Infrastructure", icon: FaSchool },
+  { text: "100% Female Staff", icon: FaFemale },
+  { text: "Live CCTV Survelliance", icon: FaVideo },
+];
+
+const rightPointers = [
+  {
+    text: "Nutritious and Balanced Meals",
+    icon: FaUtensils,
+  },
+  { text: "Experienced and Trained Staff", icon: FaUserTie },
+  { text: "Well Defined Safety Policies", icon: FaShieldAlt },
+];
 
 export default function AdmissionWhatWeOfferSection() {
   return (
@@ -15,32 +37,21 @@ export default function AdmissionWhatWeOfferSection() {
 
         <div className="mt-12 flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div className="w-full max-w-xs space-y-8 text-center lg:text-left">
-            <div>
-              <div className="flex items-center justify-center gap-3 lg:justify-start">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#cf8605] text-white">
-                  <FaLightbulb />
-                </span>
-                <h3 className="text-2xl font-extrabold text-[#232638]">
-                  Activity Based Learning
-                </h3>
-              </div>
-              <p className="mt-2 text-base leading-relaxed text-[#5e6074]">
-                Pre-school has open door and also offer free trial sessions.
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center justify-center gap-3 lg:justify-start">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#cf8605] text-white">
-                  <FaPalette />
-                </span>
-                <h3 className="text-2xl font-extrabold text-[#232638]">
-                  Creative Learning
-                </h3>
-              </div>
-              <p className="mt-2 text-base leading-relaxed text-[#5e6074]">
-                We provide creative learning environment for children.
-              </p>
-            </div>
+            {leftPointers.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.text}>
+                  <div className="flex items-center justify-center gap-3 lg:justify-start">
+                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#cf8605] text-white">
+                      <Icon />
+                    </span>
+                    <p className="text-lg font-extrabold leading-snug text-[#232638] md:text-xl">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <div className="flex h-[300px] w-full max-w-md items-center justify-center rounded-3xl bg-[#ece6f7]">
@@ -52,33 +63,22 @@ export default function AdmissionWhatWeOfferSection() {
             </div>
           </div>
 
-          <div className="w-full max-w-xs space-y-8 text-center lg:text-right">
-            <div>
-              <div className="flex items-center justify-center gap-3 lg:justify-end">
-                <h3 className="text-2xl font-extrabold text-[#232638]">
-                  Safe Environment
-                </h3>
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#cf8605] text-white">
-                  <FaShieldAlt />
-                </span>
-              </div>
-              <p className="mt-2 text-base leading-relaxed text-[#5e6074]">
-                We ensure safe and secure environment for all children.
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center justify-center gap-3 lg:justify-end">
-                <h3 className="text-2xl font-extrabold text-[#232638]">
-                  Expert Teachers
-                </h3>
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#cf8605] text-white">
-                  <FaChalkboardTeacher />
-                </span>
-              </div>
-              <p className="mt-2 text-base leading-relaxed text-[#5e6074]">
-                Our teachers are highly qualified and experienced.
-              </p>
-            </div>
+          <div className="w-full max-w-xs space-y-8 text-center lg:text-left">
+            {rightPointers.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.text}>
+                  <div className="flex items-center justify-center gap-3 lg:justify-start">
+                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#cf8605] text-white">
+                      <Icon />
+                    </span>
+                    <p className="text-lg font-extrabold leading-snug text-[#232638] md:text-xl">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
