@@ -16,15 +16,8 @@ export default function AdmissionLocationSection() {
         </div>
 
         <div className="overflow-hidden rounded-3xl border border-[#e5dccb] shadow-sm">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56930.45963812264!2d75.6287686486328!3d26.89861590000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4be65f9de83d%3A0x79f9e1a60b9291c7!2sSilver%20Stream%20World%20School%20-%20pre%20primary%20school!5e0!3m2!1sen!2sin!4v1776365217218!5m2!1sen!2sin"
-            width="100%"
-            height="420"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3557.6611377503796!2d75.73171617543943!3d26.91424747664636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDU0JzUxLjMiTiA3NcKwNDQnMDMuNSJF!5e0!3m2!1sen!2sin!4v1777754605144!5m2!1sen!2sin" width="100%" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>

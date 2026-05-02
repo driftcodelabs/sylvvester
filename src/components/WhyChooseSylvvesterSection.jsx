@@ -17,7 +17,7 @@ export default function WhyChooseSylvvesterSection() {
         <div className="relative mx-auto h-[430px] w-full max-w-[460px] rounded-4xl bg-[#f4ecfa] p-4 shadow-lg">
           <div className="relative h-full w-full overflow-hidden rounded-3xl">
             <Image
-              src="/bgRemovedKids/IMG_6257.png"
+              src="/about/kid-art-1.jpeg"
               alt="Kids enjoying activities"
               fill
               className="object-cover"
@@ -25,10 +25,10 @@ export default function WhyChooseSylvvesterSection() {
           </div>
           <div className="absolute -bottom-8 right-4 h-[180px] w-[180px] overflow-hidden rounded-3xl border-4 border-white shadow-xl md:right-0">
             <Image
-              src="/bgRemovedKids/stu.png"
+              src="/about/kid-small-image.jpg"
               alt="Happy child smiling"
               fill
-              className="bg-[#f8effa] object-contain p-2"
+              className="bg-[#f8effa] object-cover"
             />
           </div>
         </div>

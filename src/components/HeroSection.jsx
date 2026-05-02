@@ -26,12 +26,12 @@ export default function HeroSection() {
             <div className="absolute -right-2 top-1/4 h-10 w-10 rotate-12 rounded-xl bg-[#ffd166]/40 sm:-right-4 sm:h-12 sm:w-12" />
             <div className="absolute bottom-8 left-[15%] h-14 w-14 rounded-full border-4 border-[#f2a764]/60 sm:bottom-12 sm:left-1/4 sm:h-20 sm:w-20" />
             <Image
-              src="/bgRemovedKids/stu.png"
+              src="/home/heroimagea.png"
               alt="Running school child"
-              width={640}
-              height={362}
+              width={350}
+              height={300}
               priority
-              className="relative z-10 h-auto w-full max-w-xl object-contain"
+              className="relative z-10 max-w-xl object-contain"
             />
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   FaFemale,
   FaShieldAlt,
@@ -35,7 +36,7 @@ export default function AdmissionWhatWeOfferSection() {
           </h2>
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:justify-between">
+        <div className="mt-12 flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="w-full max-w-xs space-y-8 text-center lg:text-left">
             {leftPointers.map((item) => {
               const Icon = item.icon;
@@ -54,13 +55,9 @@ export default function AdmissionWhatWeOfferSection() {
             })}
           </div>
 
-          <div className="flex h-[300px] w-full max-w-md items-center justify-center rounded-3xl bg-[#ece6f7]">
-            <div className="rounded-2xl bg-[#6c1ca0] px-8 py-6 text-center text-white">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em]">
-                Placeholder
-              </p>
-              <p className="mt-2 text-4xl font-extrabold">Image</p>
-            </div>
+          <div className="flex items-center justify-center rounded-3xl bg-[#ece6f7] p-2 px-0">
+            <Image src="/admission/kids-groupa.png" alt="What We Offer" width={380} height={300} className="object-cover rounded-2xl" />
+
           </div>
 
           <div className="w-full max-w-xs space-y-8 text-center lg:text-left">

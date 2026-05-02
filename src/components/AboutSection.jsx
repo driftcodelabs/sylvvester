@@ -34,14 +34,16 @@ export default function AboutSection() {
         <div className="relative flex justify-center lg:justify-start">
           <div className="absolute -bottom-8 -left-2 h-48 w-48 rounded-full bg-white/55" />
           <div className="absolute -left-6 top-14 h-12 w-12 rounded-full border-2 border-dashed border-[#70167e]/35" />
-          <div className="relative mx-auto h-[260px] w-[260px] overflow-hidden rounded-[48%] border-[6px] border-white/70 shadow-lg sm:h-[300px] sm:w-[300px] sm:border-8 md:h-[340px] md:w-[340px] lg:h-[380px] lg:w-[380px]">
+          {/* <div className="relative mx-auto h-[260px] w-[260px] overflow-hidden rounded-[48%] border-[6px] border-white/70 shadow-lg sm:h-[300px] sm:w-[300px] sm:border-8 md:h-[340px] md:w-[340px] lg:h-[380px] lg:w-[380px]"> */}
             <Image
-              src="/bgRemovedKids/IMG_6257.png"
+              src="/home/kidspool.png"
               alt="Student in school uniform"
-              fill
+              width={590}
+              height={400}
               className="object-contain"
+              style={{filter: "drop-shadow(0 0 5  px #70167e)"}}
             />
-          </div>
+          {/* </div> */}
         </div>
 
         <div className="relative z-10 text-[#291f3e]">

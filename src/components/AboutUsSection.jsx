@@ -37,12 +37,13 @@ export default function AboutUsSection() {
         </article>
 
         <div className="relative flex justify-center lg:justify-end">
-          <div className="relative h-[360px] w-[320px] overflow-hidden rounded-4xl border-8 border-[#f2e7fb] bg-[#f8effa] shadow-xl md:h-[420px] md:w-[380px]">
+          <div className="relative  overflow-hidden rounded-4xl border-8 border-[#f2e7fb] bg-[#f8effa] shadow-xl">
             <Image
-              src="/bgRemovedKids/IMG_6257.png"
+              src="/about/kids-group.jpg"
               alt="Happy child at Sylvvester World School"
-              fill
-              className="object-contain p-4"
+              width={420}
+              height={400}
+              className="object-contain"
             />
           </div>
         </div>
