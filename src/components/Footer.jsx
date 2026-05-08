@@ -1,4 +1,5 @@
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
@@ -26,11 +27,15 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-14">
         <div className="grid grid-cols-1 gap-10 sm:gap-12 lg:grid-cols-3 lg:gap-10">
           <div>
-            <div className="leading-none text-[#d18109]">
-              <p className="text-2xl font-extrabold uppercase sm:text-3xl md:text-4xl">
-                Sylvvester
-              </p>
-              <p className="text-xl font-bold sm:text-2xl md:text-3xl">World School</p>
+            <div>
+              <Image
+                src="/main-logo.jpeg"
+                alt="Sylvvester World School logo"
+                width={160}
+                height={90}
+                className="h-auto w-[120px] sm:w-[140px] rounded-full"
+                priority
+              />
             </div>
             <div className="mt-6 space-y-2 text-sm leading-relaxed text-white/85 md:text-base">
               <p>

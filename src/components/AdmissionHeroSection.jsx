@@ -28,15 +28,13 @@ export default function AdmissionHeroSection() {
               you through the simple admission process.
             </p>
 
-            <div className="mt-8 hidden lg:block">
-              <CommonButton
-                label="Download Brochure"
-                className="px-9 py-3"
-              />
-            </div>
+            
           </div>
 
-          <div className="w-full max-w-md rounded-3xl bg-white/95 p-6 shadow-2xl backdrop-blur-sm">
+          <div
+            id="admission-enquiry-form"
+            className="scroll-mt-24 w-full max-w-md rounded-3xl bg-white/95 p-6 shadow-2xl backdrop-blur-sm"
+          >
             <h2 className="text-2xl font-extrabold text-[#232638] md:text-3xl">
               Enquiry Form
             </h2>

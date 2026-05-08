@@ -1,6 +1,22 @@
+"use client";
+
 import CommonButton from "@/components/CommonButton";
 
-export default function AdmissionCtaSection() {
+export default function AdmissionCtaSection({ ctaHref = "/admission" }) {
+  const handleTakeAdmissionClick = (event) => {
+    if (!ctaHref.startsWith("#")) {
+      return;
+    }
+
+    const targetElement = document.querySelector(ctaHref);
+    if (!targetElement) {
+      return;
+    }
+
+    event.preventDefault();
+    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section
       className="relative overflow-hidden py-20 md:py-24"
@@ -26,7 +42,12 @@ export default function AdmissionCtaSection() {
           comfortable admission experience.
         </p>
         <div className="mt-10 flex justify-center">
-          <CommonButton label="Take Admission" href="/admission" className="px-10 py-4" />
+          <CommonButton
+            label="Take Admission"
+            href={ctaHref}
+            onClick={handleTakeAdmissionClick}
+            className="px-10 py-4"
+          />
         </div>
       </div>
     </section>

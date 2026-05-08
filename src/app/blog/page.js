@@ -1,34 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
-
-const posts = [
-  {
-    id: "1",
-    category: "After School",
-    date: "Jul 29, 2025",
-    title:
-      "Kids Hised sedaugue felis Phasellus gravida lacus quis eros. aenean sapien tornt sed diam className efficit...",
-    color: "bg-[#c88f5e]",
-  },
-  {
-    id: "2",
-    category: "Kindergarten",
-    date: "Jul 29, 2025",
-    title:
-      "Kids Hised sedaugue felis Phasellus gravida lacus quis eros. aenean sapien tornt sed diam className efficit...",
-    color: "bg-[#87b2c9]",
-  },
-  {
-    id: "3",
-    category: "Uncategorized",
-    date: "Oct 31, 2025",
-    title:
-      "Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
-    color: "bg-[#2b3b4f]",
-  },
-];
+import { blogSummaries } from "@/content/blogs";
 
 export const metadata = {
   title: "Blog | Sylvvester World School",
@@ -38,14 +13,30 @@ export const metadata = {
 function BlogCard({ post, featured = false }) {
   return (
     <Link
-      href="/blog/blog-dettail"
-      className={`group block ${featured ? "lg:col-span-2" : ""}`}
+      href={`/blog/${post.slug}`}
+      className={`group block h-full ${featured ? "lg:col-span-2" : ""}`}
       aria-label={`Read blog: ${post.category}`}
     >
-      <div className="overflow-hidden rounded-4xl bg-white shadow-[0_18px_45px_rgba(26,29,46,0.08)]">
-        <div className={`aspect-video w-full ${post.color}`} />
+      <div
+        className={`flex h-full flex-col overflow-hidden rounded-4xl bg-white shadow-[0_18px_45px_rgba(26,29,46,0.08)] transition ${
+          featured ? "ring-1 ring-[#ece6f6]" : ""
+        }`}
+      >
+        {post.image ? (
+          <div className="relative min-h-[300px] w-full">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover"
+              sizes={featured ? "(min-width: 1024px) 66vw, 100vw" : "(min-width: 1024px) 33vw, 100vw"}
+            />
+          </div>
+        ) : (
+          <div className={`min-h-[200px] w-full ${post.color}`} />
+        )}
 
-        <div className="px-6 pb-8 pt-5">
+        <div className={`flex flex-1 flex-col px-6 pt-5 ${featured ? "pb-7" : "pb-8"}`}>
           <div className="flex items-center gap-4">
             <span className="rounded-md bg-[#fff3dc] px-3 py-1 text-xs font-extrabold uppercase tracking-[0.18em] text-[#d18109]">
               {post.category}
@@ -55,9 +46,16 @@ function BlogCard({ post, featured = false }) {
             </span>
           </div>
 
-          <p className="mt-6 text-lg font-semibold leading-relaxed text-[#8a96b2] transition group-hover:text-[#232638]">
-            {post.title}
-          </p>
+          <div className="mt-6 min-h-[110px]">
+            <p className="font-semibold leading-relaxed text-[#8a96b2] transition group-hover:text-[#232638] text-lg">
+              {post.title}
+            </p>
+            {post.excerpt ? (
+              <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-[#8a96b2]">
+                {post.excerpt}
+              </p>
+            ) : null}
+          </div>
         </div>
       </div>
     </Link>
@@ -65,6 +63,9 @@ function BlogCard({ post, featured = false }) {
 }
 
 export default function BlogPage() {
+  const featuredPost = blogSummaries[0];
+  const regularPosts = blogSummaries.slice(1);
+
   return (
     <>
       <Header stripeColor="#f8effa" />
@@ -73,9 +74,6 @@ export default function BlogPage() {
         <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#7d7c90]">
-                Exploring the wonders of early childhood education, one story at a time.
-              </p>
               <h1 className="mt-3 text-4xl font-extrabold text-[#232638] md:text-6xl">
                 Blog
               </h1>
@@ -93,16 +91,17 @@ export default function BlogPage() {
                   id="blog-search"
                   type="search"
                   placeholder="Search..."
-                  className="w-full rounded-full border border-[#ece6f6] bg-[#f8effa] py-3 pl-11 pr-4 text-sm text-[#232638] outline-none ring-[#d18109]/40 focus:border-[#d18109] focus:ring-2"
+                  className="w-full rounded-full border border-[#ece6f6] bg-[#ffffff] py-3 pl-11 pr-4 text-sm text-[#232638] outline-none ring-[#d18109]/40 focus:border-[#d18109] focus:ring-2"
                 />
               </div>
             </div>
           </div>
 
           <div className="mt-12 grid gap-10 lg:grid-cols-3">
-            <BlogCard post={posts[2]} featured />
-            <BlogCard post={posts[0]} />
-            <BlogCard post={posts[1]} />
+            <BlogCard post={featuredPost} featured />
+            {regularPosts.map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))}
           </div>
         </div>
       </section>

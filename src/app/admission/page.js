@@ -19,7 +19,7 @@ export default function AdmissionPage() {
       <AdmissionHeroSection />
       <AdmissionWhyChooseSection />
       <AdmissionWhatWeOfferSection />
-      <AdmissionCtaSection />
+      <AdmissionCtaSection ctaHref="#admission-enquiry-form" />
       <AdmissionLocationSection />
       <Footer />
     </>

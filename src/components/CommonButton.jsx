@@ -18,7 +18,7 @@ export default function CommonButton({
 
   if (href) {
     return (
-      <Link href={href} className={baseClassName}>
+      <Link href={href} className={baseClassName} onClick={onClick}>
         {content}
       </Link>
     );

@@ -8,11 +8,14 @@ export const metadata = {
     "Explore moments from Sylvvester World School in our colorful school gallery.",
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage({ searchParams }) {
+  const sp = await searchParams;
+  const continueFromHome = sp?.more === "1";
+
   return (
     <>
       <Header stripeColor='#f8effa' />
-      <GalleryGridSection />
+      <GalleryGridSection continueFromHome={continueFromHome} />
       <Footer />
     </>
   );

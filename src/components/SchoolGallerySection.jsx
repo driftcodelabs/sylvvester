@@ -1,42 +1,38 @@
+"use client";
+
+import Image from "next/image";
+import { useMemo, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import CommonButton from "@/components/CommonButton";
-
-const galleryItems = [
-  {
-    id: 1,
-    title: "Kids Climbing",
-    subtitle: "School",
-    classes: "lg:col-span-4 lg:row-span-1",
-    color: "bg-[#d98b67]",
-    height: "h-[200px] sm:h-[220px] md:h-[250px]",
-  },
-  {
-    id: 2,
-    title: "Kids Ground",
-    subtitle: "School",
-    classes: "lg:col-span-4 lg:row-span-1",
-    color: "bg-[#d8c8ba]",
-    height: "h-[200px] sm:h-[220px] md:h-[250px]",
-  },
-  {
-    id: 3,
-    title: "Creative Time",
-    subtitle: "School",
-    classes: "lg:col-span-4 lg:row-span-2",
-    color: "bg-[#8c7cc0]",
-    height: "h-[240px] sm:h-[320px] md:h-[420px] lg:h-[530px]",
-  },
-  {
-    id: 4,
-    title: "Happy Hands",
-    subtitle: "School",
-    classes: "lg:col-span-8 lg:row-span-1",
-    color: "bg-[#715f8e]",
-    height: "h-[200px] sm:h-[220px] md:h-[250px]",
-  },
-];
+import GalleryLightbox from "@/components/GalleryLightbox";
+import {
+  GALLERY_IMAGE_PATHS,
+  GALLERY_IMAGES_PER_LOAD,
+} from "@/constants/galleryImages";
 
 export default function SchoolGallerySection() {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const previewPaths = useMemo(
+    () => GALLERY_IMAGE_PATHS.slice(0, GALLERY_IMAGES_PER_LOAD),
+    []
+  );
+  const activeItem = useMemo(
+    () => (activeIndex === null ? null : GALLERY_IMAGE_PATHS[activeIndex]),
+    [activeIndex]
+  );
+
+  const showPrevious = () => {
+    if (activeIndex === null) return;
+    setActiveIndex(
+      (activeIndex - 1 + GALLERY_IMAGE_PATHS.length) % GALLERY_IMAGE_PATHS.length
+    );
+  };
+
+  const showNext = () => {
+    if (activeIndex === null) return;
+    setActiveIndex((activeIndex + 1) % GALLERY_IMAGE_PATHS.length);
+  };
+
   return (
     <section className="bg-white py-12 sm:py-16 md:py-20">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-10">
@@ -47,33 +43,48 @@ export default function SchoolGallerySection() {
           Our Gallery For Kids
         </h2>
 
-        <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 sm:gap-4 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2">
-          {galleryItems.map((item) => (
-            <article
-              key={item.id}
-              className={`group relative overflow-hidden rounded-2xl ${item.classes} ${item.height}`}
+        <div className="mt-8 grid grid-cols-2 gap-4 sm:mt-10 md:grid-cols-3 lg:grid-cols-4">
+          {previewPaths.map((imagePath, idx) => (
+            <button
+              key={imagePath}
+              type="button"
+              onClick={() => setActiveIndex(idx)}
+              className="group relative aspect-4/3 overflow-hidden rounded-2xl text-left"
             >
-              <div className={`h-full w-full ${item.color}`} />
-
+              <Image
+                src={imagePath}
+                alt={`Gallery image ${idx + 1}`}
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                className="object-cover transition duration-300 group-hover:scale-105"
+                priority={idx < GALLERY_IMAGES_PER_LOAD}
+              />
               <div className="absolute inset-0 flex items-center justify-center bg-[#d18109]/85 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="text-center text-white">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#6c1ca0] text-2xl">
-                    <FaEye />
-                  </div>
-                  <p className="mt-5 text-2xl uppercase tracking-[0.14em]">
-                    {item.subtitle}
-                  </p>
-                  <p className="mt-1 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">{item.title}</p>
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#6c1ca0] text-2xl text-white">
+                  <FaEye />
                 </div>
               </div>
-            </article>
+            </button>
           ))}
         </div>
 
         <div className="mt-10 flex justify-center">
-          <CommonButton label="View More" className="px-9 py-3 uppercase" />
+          <CommonButton
+            label="View More"
+            className="px-9 py-3 uppercase"
+            href="/gallery?more=1"
+          />
         </div>
       </div>
+
+      <GalleryLightbox
+        activeIndex={activeIndex}
+        imageSrc={activeItem}
+        total={GALLERY_IMAGE_PATHS.length}
+        onClose={() => setActiveIndex(null)}
+        onPrevious={showPrevious}
+        onNext={showNext}
+      />
     </section>
   );
 }
