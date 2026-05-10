@@ -64,21 +64,21 @@ function TestimonialCard({ item, singleInRow, onReadMore }) {
         <div className="flex h-full min-h-0 flex-col rounded-2xl bg-white/95 p-5 text-black shadow-[0_8px_28px_rgba(26,29,46,0.08)] sm:rounded-[1.35rem] sm:p-6 md:p-7">
           <div className="shrink-0">
             <div className="flex flex-wrap items-start gap-3 sm:gap-4">
-              <div
+              {/* <div
                 className={`h-11 w-11 shrink-0 rounded-full ${item.avatarColor} border-2 border-white/90 sm:h-12 sm:w-12 md:h-14 md:w-14`}
-              />
+              /> */}
               <div className="min-w-0 flex-1">
                 <p className="text-lg font-bold leading-tight sm:text-xl md:text-2xl">{item.name}</p>
                 <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#f0b73f] sm:text-xs">
                   {item.role}
                 </p>
-                <div className="mt-1 flex items-center gap-1 text-[10px] text-[#f0b73f] sm:text-xs">
+                {/* <div className="mt-1 flex items-center gap-1 text-[10px] text-[#f0b73f] sm:text-xs">
                   <FaStar />
                   <FaStar />
                   <FaStar />
                   <FaStar />
                   <FaStar />
-                </div>
+                </div> */}
               </div>
               <div className="ml-auto shrink-0 rounded-full bg-[#d18109] p-2 text-base text-white sm:p-2.5 sm:text-lg">
                 <FaQuoteRight />

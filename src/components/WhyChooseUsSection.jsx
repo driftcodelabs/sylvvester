@@ -18,6 +18,7 @@ const slides = [
     ],
     icon: "💪",
     color: "bg-[#e45b5b]",
+    image: "/gallery/IMG_6252.JPG",
   },
   {
     title: "Social and Emotional Growth",
@@ -30,6 +31,7 @@ const slides = [
     ],
     icon: "🤝",
     color: "bg-[#54b9b2]",
+    image: "/gallery/7ae5ce83-47ed-408e-a151-396509e04443.jpg",
   },
   {
     title: "Inquiry-Based Learning",
@@ -42,6 +44,7 @@ const slides = [
     ],
     icon: "🔍",
     color: "bg-[#6f7fe8]",
+    image: "/gallery/9efe42e5-ed49-4638-a6bc-3d5f9e72d049.JPG",
   },
   {
     title: "Effective Communication",
@@ -54,6 +57,7 @@ const slides = [
     ],
     icon: "🗣️",
     color: "bg-[#f0a550]",
+    image: "/gallery/82e3ec2c-8352-4b61-b7f8-4b5dc8f0db0e.JPG",
   },
   {
     title: "Creative and Critical Thinking",
@@ -66,6 +70,7 @@ const slides = [
     ],
     icon: "💡",
     color: "bg-[#8a6de9]",
+    image: "/gallery/6b19a145-41a9-4fe8-b175-8750b70b755e.JPG",
   },
   {
     title: "Tech and Digital Awareness",
@@ -78,6 +83,7 @@ const slides = [
     ],
     icon: "💻",
     color: "bg-[#3fa77d]",
+    image: "/gallery/IMG_9307.png",
   },
   {
     title: "Striving for Excellence",
@@ -90,6 +96,7 @@ const slides = [
     ],
     icon: "🌟",
     color: "bg-[#e07a5f]",
+    image: "/gallery/IMG_9490.JPG",
   },
 ];
 
@@ -269,7 +276,13 @@ export default function WhyChooseUsSection() {
               <SwiperSlide key={`${slide.title}-${slide.color}`} className="h-auto">
                 <article className="relative flex h-full min-h-[380px] flex-col rounded-[1.7rem] border border-[#ece5d9] bg-white px-3 pb-14 pt-3 shadow-sm sm:min-h-[400px] sm:px-4 sm:pb-16 sm:pt-4 md:min-h-[420px]">
                   <div className={`relative h-[140px] rounded-3xl sm:h-[160px] md:h-[170px] ${slide.color}`}>
-                    <div className="absolute inset-0 m-auto h-24 w-24 rounded-2xl bg-white/35" />
+                  <Image
+                      src={slide.image}
+                      alt={slide.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                    />
                     <div className="absolute left-1/2 top-full -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-white bg-[#9f2694] p-4 text-2xl text-white">
                       {slide.icon}
                     </div>
@@ -350,8 +363,15 @@ export default function WhyChooseUsSection() {
               <FaTimes />
             </button>
 
-            <div className={`min-h-[200px] ${activeSlide.color} flex items-center justify-center p-6 sm:min-h-[260px] md:min-h-[290px] md:p-8`}>
-              <div className="h-32 w-32 rounded-3xl bg-white/35 sm:h-40 sm:w-40 md:h-44 md:w-44" />
+            <div className={`relative min-h-[200px] overflow-hidden ${activeSlide.color} sm:min-h-[260px] md:min-h-[290px]`}>
+              <Image
+                src={activeSlide.image}
+                alt={activeSlide.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 767px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-black/10" />
             </div>
 
             <div className="flex flex-col justify-center px-5 py-8 text-[#232638] sm:px-8 sm:py-10 md:px-10">

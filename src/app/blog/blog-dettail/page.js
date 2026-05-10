@@ -1,9 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = {
-  title: "Blog Detail | Sylvvester World School",
-  description: "Blog post details from Sylvvester World School.",
+  ...buildPageMetadata({
+    title: "Sample Blog Detail",
+    description: "Sample blog detail page for Sylvvester World School.",
+    path: "/blog/blog-dettail",
+  }),
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function BlogDetailPage() {

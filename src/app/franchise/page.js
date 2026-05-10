@@ -7,16 +7,31 @@ import FranchiseWhyStartPreschoolSection from "@/components/FranchiseWhyStartPre
 import FranchiseSupportSection from "@/components/FranchiseSupportSection";
 import FranchiseRoadmapSection from "@/components/FranchiseRoadmapSection";
 import FaqSection from "@/components/FaqSection";
+import { buildPageMetadata, getWebPageSchema } from "@/lib/seo";
 
-export const metadata = {
-  title: "Franchise | Sylvvester World School",
+const pageSeo = {
+  title: "Preschool Franchise in India",
   description:
-    "Explore franchise opportunities with Sylvvester World School. Share your details to receive information and connect with our team.",
+    "Explore preschool franchise opportunities with Sylvvester World School. Partner with a trusted early childhood education brand in India.",
+  path: "/franchise",
+  keywords: [
+    "preschool franchise in india",
+    "play school franchise",
+    "education franchise opportunity",
+  ],
 };
+
+export const metadata = buildPageMetadata(pageSeo);
 
 export default function FranchisePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getWebPageSchema(pageSeo)),
+        }}
+      />
       <Header stripeColor="#ffffff" />
       <FranchiseHeroSection />
       <FranchiseWhyChooseSection />

@@ -4,17 +4,28 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
 import { blogSummaries } from "@/content/blogs";
+import { buildPageMetadata, getCanonicalUrl, getWebPageSchema } from "@/lib/seo";
 
-export const metadata = {
-  title: "Blog | Sylvvester World School",
-  description: "Read the latest updates and stories from Sylvvester World School.",
+const pageSeo = {
+  title: "Preschool Blog",
+  description:
+    "Read expert articles on preschool education, parenting tips, and early childhood development from Sylvvester World School.",
+  path: "/blog",
+  keywords: [
+    "preschool blog india",
+    "early childhood education blog",
+    "parenting tips for preschoolers",
+    "preschool in jaipur blog",
+  ],
 };
+
+export const metadata = buildPageMetadata(pageSeo);
 
 function BlogCard({ post, featured = false }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className={`group block h-full ${featured ? "lg:col-span-2" : ""}`}
+      className={`group block h-fit ${featured ? "lg:col-span-2" : ""}`}
       aria-label={`Read blog: ${post.category}`}
     >
       <div
@@ -23,7 +34,7 @@ function BlogCard({ post, featured = false }) {
         }`}
       >
         {post.image ? (
-          <div className="relative min-h-[300px] w-full">
+          <div className={`relative ${post.image ? "min-h-[300px]" : "min-h-unset"} w-full`}>
             <Image
               src={post.image}
               alt={post.title}
@@ -33,7 +44,7 @@ function BlogCard({ post, featured = false }) {
             />
           </div>
         ) : (
-          <div className={`min-h-[200px] w-full ${post.color}`} />
+          <div className={`min-h-unset w-full ${post.color}`} />
         )}
 
         <div className={`flex flex-1 flex-col px-6 pt-5 ${featured ? "pb-7" : "pb-8"}`}>
@@ -65,9 +76,27 @@ function BlogCard({ post, featured = false }) {
 export default function BlogPage() {
   const featuredPost = blogSummaries[0];
   const regularPosts = blogSummaries.slice(1);
+  const blogListSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Sylvvester World School Blog",
+    url: getCanonicalUrl("/blog"),
+    blogPost: blogSummaries.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      url: getCanonicalUrl(`/blog/${post.slug}`),
+      datePublished: post.date,
+    })),
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([getWebPageSchema(pageSeo), blogListSchema]),
+        }}
+      />
       <Header stripeColor="#f8effa" />
 
       <section className="bg-[#f8effa] py-18">
@@ -79,7 +108,7 @@ export default function BlogPage() {
               </h1>
             </div>
 
-            <div className="w-full max-w-md">
+            {/* <div className="w-full max-w-md">
               <label className="sr-only" htmlFor="blog-search">
                 Search blog
               </label>
@@ -94,7 +123,7 @@ export default function BlogPage() {
                   className="w-full rounded-full border border-[#ece6f6] bg-[#ffffff] py-3 pl-11 pr-4 text-sm text-[#232638] outline-none ring-[#d18109]/40 focus:border-[#d18109] focus:ring-2"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="mt-12 grid gap-10 lg:grid-cols-3">

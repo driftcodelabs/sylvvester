@@ -1,16 +1,27 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { buildPageMetadata, getWebPageSchema } from "@/lib/seo";
 
-export const metadata = {
-  title: "Policies | Sylvvester World School",
+const pageSeo = {
+  title: "School Policies",
   description:
-    "Read school rules, safety, fee, and parent communication policies at Sylvvester World School.",
+    "Read Sylvvester World School policies on safety, fees, parent communication, and preschool guidelines.",
+  path: "/policies",
+  keywords: ["preschool policies", "school safety policy", "admission and fee policy"],
 };
+
+export const metadata = buildPageMetadata(pageSeo);
 
 export default function PoliciesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getWebPageSchema(pageSeo)),
+        }}
+      />
       <Header stripeColor="#ffffff" />
 
       <main className="bg-[#f8f2ff]">

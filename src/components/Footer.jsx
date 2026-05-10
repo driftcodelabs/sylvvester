@@ -1,6 +1,7 @@
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import { GALLERY_IMAGE_PATHS } from "@/constants/galleryImages";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -12,14 +13,7 @@ const navItems = [
   { label: "Blog", href: "/blog" },
 ];
 
-const galleryPlaceholders = [
-  "bg-[#d98b67]",
-  "bg-[#87b2c9]",
-  "bg-[#9a8ac7]",
-  "bg-[#c88f5e]",
-  "bg-[#6f7fe8]",
-  "bg-[#54b9b2]",
-];
+const footerGalleryImages = GALLERY_IMAGE_PATHS.slice(0, 6);
 
 export default function Footer() {
   return (
@@ -95,12 +89,16 @@ export default function Footer() {
               Gallery
             </p>
             <div className="grid grid-cols-3 gap-2 sm:gap-3">
-              {galleryPlaceholders.map((bg, i) => (
-                <div
-                  key={i}
-                  className={`aspect-square rounded-lg ${bg}`}
-                  aria-hidden="true"
-                />
+              {footerGalleryImages.map((src, i) => (
+                <div key={src} className="relative aspect-square overflow-hidden rounded-lg">
+                  <Image
+                    src={src}
+                    alt={`School gallery thumbnail ${i + 1}`}
+                    fill
+                    sizes="(min-width: 1024px) 8vw, 20vw"
+                    className="object-cover"
+                  />
+                </div>
               ))}
             </div>
           </div>

@@ -1,6 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { blogPosts, getBlogBySlug } from "@/content/blogs";
+import {
+  buildPageMetadata,
+  enforceSeoDescriptionLength,
+  enforceSeoTitleLength,
+  getBlogPostingSchema,
+  getCanonicalUrl,
+  getWebPageSchema,
+} from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
@@ -18,16 +26,26 @@ export async function generateMetadata({ params }) {
   const post = getBlogBySlug(slug);
 
   if (!post) {
-    return {
-      title: "Blog Not Found | Sylvvester World School",
+    return buildPageMetadata({
+      title: "Blog Not Found",
       description: "The requested blog post could not be found.",
-    };
+      path: "/blog",
+    });
   }
 
-  return {
-    title: `${post.title} | Sylvvester World School`,
-    description: post.seoDescription || post.excerpt,
-  };
+  const seoTitle = enforceSeoTitleLength(post.title);
+  const seoDescription = enforceSeoDescriptionLength(
+    post.seoDescription || post.excerpt,
+    [post.excerpt, ...(post.blocks || []).map((block) => block.content || "")],
+  );
+
+  return buildPageMetadata({
+    title: seoTitle,
+    description: seoDescription,
+    path: `/blog/${post.slug}`,
+    type: "article",
+    keywords: [post.category, "preschool blog", "early childhood education blog"],
+  });
 }
 
 function BlogBlock({ block }) {
@@ -70,8 +88,34 @@ export default async function BlogDetailPage({ params }) {
     notFound();
   }
 
+  const seoTitle = enforceSeoTitleLength(post.title);
+  const seoDescription = enforceSeoDescriptionLength(
+    post.seoDescription || post.excerpt,
+    [post.excerpt, ...(post.blocks || []).map((block) => block.content || "")],
+  );
+
+  const pageSeo = {
+    title: seoTitle,
+    description: seoDescription,
+    path: `/blog/${post.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            getWebPageSchema(pageSeo),
+            {
+              ...getBlogPostingSchema(post),
+              datePublished: new Date(post.date).toISOString(),
+              dateModified: new Date(post.date).toISOString(),
+              url: getCanonicalUrl(`/blog/${post.slug}`),
+            },
+          ]),
+        }}
+      />
       <Header stripeColor="#f8effa" />
 
       <article className="bg-[#f8effa] py-18">

@@ -3,18 +3,18 @@ import { FaGem } from "react-icons/fa";
 function BulletList({ items }) {
   return (
     <div className="mt-4 space-y-2 text-sm leading-relaxed text-[#5e6074] md:text-base">
-      {items.map((line) =>
+      {items.map((line, index) =>
         line === "" ? (
-          <div key={`spacer-${Math.random()}`} className="h-2" />
+          <div key={`spacer-${index}`} className="h-2" />
         ) : (
-          <p key={line}>{line}</p>
+          <p key={`${line}-${index}`}>{line}</p>
         )
       )}
     </div>
   );
 }
 
-function FranchiseCard({ title, bodyLines, flip = false }) {
+function FranchiseCard({ title, bodyLines, imageSrc, imageAlt, flip = false }) {
   return (
     <div
       className={`flex flex-col gap-8 rounded-4xl bg-white p-6 shadow-[0_18px_45px_rgba(26,29,46,0.10)] md:flex-row md:items-center md:gap-10 md:p-10 ${
@@ -23,7 +23,7 @@ function FranchiseCard({ title, bodyLines, flip = false }) {
     >
       <div className="md:flex-1">
         <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#cf8605] text-xl text-white">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#92029c] text-xl text-white">
             <FaGem />
           </div>
           <div>
@@ -37,8 +37,13 @@ function FranchiseCard({ title, bodyLines, flip = false }) {
       </div>
 
       <div className="md:flex-1">
-        <div className="h-[220px] w-full overflow-hidden rounded-3xl bg-linear-to-br from-[#d9c8ef] via-[#f8effa] to-[#ffe7c2] shadow-sm md:h-[260px]">
-          <div className="h-full w-full bg-[#232638]/10" />
+        <div className="h-[220px] w-full overflow-hidden rounded-3xl bg-linear-to-br from-[#ffffff] via-[#f8effa] to-[#d9c8ef] p-4 shadow-sm md:h-[260px] md:p-5">
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="h-full w-full object-contain"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
@@ -67,6 +72,8 @@ export default function FranchiseLegacySection() {
               "refined learning experiences.",
               "Sylvvester don’t simply run preschools. We curate childhood.",
             ]}
+            imageSrc="/icons/Partner with Excellence.svg"
+            imageAlt="Illustration of a trusted school partnership and early education growth"
           />
 
           <FranchiseCard
@@ -80,6 +87,8 @@ export default function FranchiseLegacySection() {
               "Every child receives an education that nurtures intellect, confidence, creativity and emotional intelligence - creating a",
               "strong foundation for lifelong success.",
             ]}
+            imageSrc="/icons/Crafted with purpose.svg"
+            imageAlt="Illustration of structured curriculum and child learning development"
           />
 
           <FranchiseCard
@@ -92,6 +101,8 @@ export default function FranchiseLegacySection() {
               "• A reputation that commands confidence and loyalty",
               "This ensures faster enrolments, stronger word-of-mouth and long-term brand value in your city.",
             ]}
+            imageSrc="/icons/Aspire.svg"
+            imageAlt="Illustration of parents and children representing trust in a preschool brand"
           />
 
           <FranchiseCard
@@ -105,6 +116,8 @@ export default function FranchiseLegacySection() {
               "• Ongoing strategic mentoring and performance support",
               "You operate with clarity, confidence and control, backed by a deeply experienced central team.",
             ]}
+             imageSrc="/icons/Partnership.svg"
+            imageAlt="Illustration of collaborative partnership and operational support"
           />
 
           <FranchiseCard
@@ -118,6 +131,8 @@ export default function FranchiseLegacySection() {
               "• Long-term profitability with purpose",
               "This is a future-ready education enterprise, not a short-term business.",
             ]}
+             imageSrc="/icons/Sustainable.svg"
+            imageAlt="Illustration of sustainable growth and long-term success"
           />
 
           <FranchiseCard
@@ -130,6 +145,8 @@ export default function FranchiseLegacySection() {
               "• Want to create a respected institution",
               "• Believe in building a legacy, not just a venture",
             ]}
+            imageSrc="/icons/Build.svg"
+            imageAlt="Illustration of leadership building an exceptional institution"
           />
 
           <FranchiseCard
@@ -138,6 +155,8 @@ export default function FranchiseLegacySection() {
               "When you choose us, you choose:",
               "Elegance. Excellence. Trust. Impact. Growth.",
             ]}
+            imageSrc="/icons/Vision.svg"
+            imageAlt="Illustration of a visionary franchise journey and business growth"
           />
         </div>
       </div>
